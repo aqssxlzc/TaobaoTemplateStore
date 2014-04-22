@@ -1,0 +1,15 @@
+application: taobaotemplatestore
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /icon.png
+  static_files: static/icon.png
+  upload: static/icon.png
+
+- url: /static
+  static_dir: static
+
+- url: .*
+  script: storeAPIHandler.py
